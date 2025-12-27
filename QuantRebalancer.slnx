@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/QuantRebalancer.Domain/QuantRebalancer.Domain.csproj" />
+    <Project Path="src/QuantRebalancer.Infrastructure/QuantRebalancer.Infrastructure.csproj" />
+    <Project Path="src/QuantRebalancer.Worker/QuantRebalancer.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/QuantRebalancer.Tests/QuantRebalancer.Tests.csproj" />
+  </Folder>
+</Solution>
