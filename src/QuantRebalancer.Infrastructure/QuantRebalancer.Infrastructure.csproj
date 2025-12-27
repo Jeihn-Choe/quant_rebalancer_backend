@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="8.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\QuantRebalancer.Domain\QuantRebalancer.Domain.csproj" />
   </ItemGroup>
 
