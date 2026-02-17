@@ -84,7 +84,7 @@ graph TD
 *   도메인 로직은 상대방이 KIS인지 Upbit인지 알 필요 없이, 추상화된 `PlaceOrderAsync` 명령만 내립니다.
 
 ---
-
+1
 ## 4. 프로젝트 구조 (Project Structure)
 
 ```text

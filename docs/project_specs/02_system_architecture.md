@@ -3,10 +3,10 @@
 ## 1. 개요
 * **목적:** 주식/코인 자산 관리 및 하이브리드 자동 리밸런싱 시스템
 * **핵심 역할:**
-    1. **API Server:** 프론트엔드 요청 처리 (설정, 조회, 수동 매수)
-    2. **Background Bot:** 정해진 시간에 자산 비율 점검 및 자동 매매 (Smart Filling)
+    1. **Background Bot:** 정해진 시간에 자산 비율 점검 및 자동 매매 (Smart Filling)
+    2. **API Server (향후 확장 예정):** 장기적으로 프론트엔드 요청 처리 (설정, 조회, 수동 매수)를 지원하기 위한 역할. 현재는 백엔드 워커 서비스에 해당 기능이 포함되어 있거나, 별도의 서비스로 분리될 수 있음.
 * **Tech Stack:**
-    * Framework: ASP.NET Core 8.0 Web API
+    * Framework: ASP.NET Core 8.0 Web API (주로 Background Bot 기능 구현에 활용되며, 향후 API Server 확장을 고려)
     * Language: C#
     * Architecture: Clean Architecture (Domain / Infrastructure / Web / Tests)
     * Notification: n8n Webhook 위임

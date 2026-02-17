@@ -1,10 +1,8 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantRebalancer.Worker", "src\QuantRebalancer.Worker\QuantRebalancer.Worker.csproj", "{ACDC9884-7AAA-FD78-4B43-B901B7BC1924}"
 EndProject
@@ -12,7 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantRebalancer.Domain", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantRebalancer.Infrastructure", "src\QuantRebalancer.Infrastructure\QuantRebalancer.Infrastructure.csproj", "{4C3F3539-53AB-5861-E1E8-4C7C7434D29E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantRebalancer.Tests", "tests\QuantRebalancer.Tests\QuantRebalancer.Tests.csproj", "{B576FB13-4E03-7786-4024-1DC2D03427C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantRebalancer.Application", "src\QuantRebalancer.Application\QuantRebalancer.Application.csproj", "{2CBB49D0-6267-40E7-AEA0-C04307390B40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FF170A29-1150-4152-BAD7-175E871F9864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantRebalancer.Domain.Tests", "tests\QuantRebalancer.Domain.Tests\QuantRebalancer.Domain.Tests.csproj", "{CCDD7D63-1BBA-4EDF-83DD-D2DCAC8C00C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +34,14 @@ Global
 		{4C3F3539-53AB-5861-E1E8-4C7C7434D29E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C3F3539-53AB-5861-E1E8-4C7C7434D29E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C3F3539-53AB-5861-E1E8-4C7C7434D29E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B576FB13-4E03-7786-4024-1DC2D03427C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B576FB13-4E03-7786-4024-1DC2D03427C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B576FB13-4E03-7786-4024-1DC2D03427C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B576FB13-4E03-7786-4024-1DC2D03427C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CBB49D0-6267-40E7-AEA0-C04307390B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CBB49D0-6267-40E7-AEA0-C04307390B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CBB49D0-6267-40E7-AEA0-C04307390B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CBB49D0-6267-40E7-AEA0-C04307390B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCDD7D63-1BBA-4EDF-83DD-D2DCAC8C00C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCDD7D63-1BBA-4EDF-83DD-D2DCAC8C00C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCDD7D63-1BBA-4EDF-83DD-D2DCAC8C00C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCDD7D63-1BBA-4EDF-83DD-D2DCAC8C00C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,7 +50,8 @@ Global
 		{ACDC9884-7AAA-FD78-4B43-B901B7BC1924} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{6C5529DA-FA52-EBAD-8CFB-7A82D4D33ED0} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{4C3F3539-53AB-5861-E1E8-4C7C7434D29E} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
-		{B576FB13-4E03-7786-4024-1DC2D03427C9} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{2CBB49D0-6267-40E7-AEA0-C04307390B40} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{CCDD7D63-1BBA-4EDF-83DD-D2DCAC8C00C5} = {FF170A29-1150-4152-BAD7-175E871F9864}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1B7A69D-34DA-43A4-B009-FA3DA7EA91D4}
