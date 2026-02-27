@@ -12,16 +12,14 @@ public class AssetTests
         var ticker = new Ticker("AAPL");
         var assetType = AssetType.UsStock;
         var currentValue = new Money(1_000_000m, "KRW");
-        var isAutoTarget = true;
 
         // When
-        var asset = new Asset(ticker, assetType, currentValue, isAutoTarget);
+        var asset = new Asset(ticker, assetType, currentValue);
 
         // Then
         asset.Ticker.Should().Be(ticker);
         asset.AssetType.Should().Be(assetType);
         asset.CurrentValue.Should().Be(currentValue);
-        asset.IsAutoTarget.Should().Be(isAutoTarget);
     }
 
     [Fact]
@@ -31,9 +29,8 @@ public class AssetTests
         var ticker = default(Ticker);
         var assetType = AssetType.UsStock;
         var currentValue = new Money(1_000_000m, "KRW");
-        var isAutoTarget = true;
         // When
-        var act = () => new Asset(ticker, assetType, currentValue, isAutoTarget);
+        var act = () => new Asset(ticker, assetType, currentValue);
 
         // Then
         act.Should().Throw<ArgumentException>().WithParameterName("ticker");
@@ -47,10 +44,9 @@ public class AssetTests
         var ticker = new Ticker("AAPL");
         var assetType = AssetType.UsStock;
         var currentValue = default(Money);
-        var isAutoTarget = true;
 
         // When
-        var act = () => new Asset(ticker, assetType, currentValue, isAutoTarget);
+        var act = () => new Asset(ticker, assetType, currentValue);
 
         // Then
         act.Should().Throw<ArgumentException>().WithParameterName("currentValue");
@@ -63,8 +59,7 @@ public class AssetTests
         var asset = new Asset(
             new Ticker("AAPL"),
             AssetType.UsStock,
-            new Money(1_000_000m, "KRW"),
-            true);
+            new Money(1_000_000m, "KRW"));
 
         var newValue = new Money(2_000_000m, "KrW");
         // When
@@ -81,8 +76,7 @@ public class AssetTests
         var asset = new Asset(
             new Ticker("AAPL"),
             AssetType.UsStock,
-            new Money(1_000_000m, "KRW"),
-            true);
+            new Money(1_000_000m, "KRW"));
 
         var newValue = default(Money);
 

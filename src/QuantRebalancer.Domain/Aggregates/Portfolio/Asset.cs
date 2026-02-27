@@ -8,9 +8,8 @@ namespace QuantRebalancer.Domain.Aggregates.Portfolio
         public Ticker Ticker { get; }
         public AssetType AssetType { get; }
         public Money CurrentValue { get; private set; }
-        public bool IsAutoTarget { get; private set; }
 
-        public Asset(Ticker ticker, AssetType assetType, Money currentValue, bool isAutoTarget)
+        public Asset(Ticker ticker, AssetType assetType, Money currentValue)
         {
             if (ticker.Equals(default))
                 throw new ArgumentException("Ticker는 필수입니다.", nameof(ticker));
@@ -21,7 +20,6 @@ namespace QuantRebalancer.Domain.Aggregates.Portfolio
             Ticker = ticker;
             AssetType = assetType;
             CurrentValue = currentValue;
-            IsAutoTarget = isAutoTarget;
         }
 
         public void UpdateCurrentValue(Money newValue)
@@ -32,9 +30,5 @@ namespace QuantRebalancer.Domain.Aggregates.Portfolio
             CurrentValue = newValue;
         }
 
-        public void SetAutoTarget(bool isAutoTarget)
-        {
-            IsAutoTarget = isAutoTarget;
-        }
     }
 }
